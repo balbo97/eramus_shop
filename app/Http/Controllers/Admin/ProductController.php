@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Product;
+use App\Models\Type;
 
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
@@ -28,7 +29,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $types = Type::all();
+        return view('admin.products.create', compact('types'));
     }
 
     /**
