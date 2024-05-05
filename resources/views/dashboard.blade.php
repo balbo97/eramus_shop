@@ -19,13 +19,13 @@
                         <div class="text_blue_primary">
                             <a href="{{ route('admin.products.index') }}"
                                 class="text-decoration-none text-reset btn btn-light p-3 w-100"><i
-                                    class="fa-solid fa-pizza-slice me-2"></i>
+                                    class="fa-solid fa-store fa-xl me-2"></i>
                                 Visualizza i tuoi prodotti
                             </a>
                         </div>
                         <div class="text_blue_primary mt-3">
                             <a href="" class="text-decoration-none text-reset btn btn-light p-3 w-100"><i
-                                    class="fa-solid fa-bag-shopping me-md-2 "></i>
+                                    class="fa-solid fa-tag fa-xl me-md-2 "></i>
                                 Visualizza le tipologie
                             </a>
                         </div>
@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 m-auto col-md-9 text-warning text-center pt-3">
+            <div class="col-12 m-auto col-md-9 text-center pt-3">
 
 
                 @yield('dashboard_content')
