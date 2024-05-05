@@ -17,22 +17,22 @@
                     <thead>
                         <tr class="">
 
-                            <th scope="col" class="fw-light fs-5">#ID</th>
-                            <th scope="col" class="fw-light fs-5">Nome</th>
-                            <th scope="col" class="fw-light fs-5">Descrizione</th>
-                            <th scope="col" class="fw-light fs-5">Data Inserimento</th>
-                            <th scope="col" class="fw-light fs-5">Tipologia</th>
+                            <th scope="col" class="fs-5">#ID</th>
+                            <th scope="col" class="fs-5">Nome</th>
+                            <th scope="col" class="fs-5">Descrizione</th>
+                            <th scope="col" class="fs-5">Data Inserimento</th>
+                            <th scope="col" class="fs-5">Tipologia</th>
+                            <th scope="col" class="fs-5"></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($products as $product)
                             <tr class="">
 
-                                <td class="text-secondary-emphasis fw-bold ">{{ $product->name }}</td>
-                                <td class="text-secondary-emphasis d-lg-table-cell d-none">{{ $product->description }}
-                                </td>
-                                <td class="text-secondary-emphasis ">{{ $product->created_at }}</td>
-                                <td class="text-secondary-emphasis ">{{ $product->created_at }}</td>
+                                <td class="text-secondary-emphasis fw-bold ">{{ $product->id }}</td>
+                                <td class="text-secondary-emphasis">{{ $product->name }}</td>
+                                <td class="text-secondary-emphasis">{{ $product->description }}</td>
+                                <td class="text-secondary-emphasis ">{{ $product->created_at->format('d-m-Y') }}</td>
                                 <td class="text-secondary-emphasis ">{{ $product->type->name }}</td>
 
                                 <td>

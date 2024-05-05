@@ -46,8 +46,6 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        // Stampiamo i dati inviati dal form per debug
-        dd($request->all());
 
         // recupero i dati inviati dalla form
         $form_data = $request->all();
