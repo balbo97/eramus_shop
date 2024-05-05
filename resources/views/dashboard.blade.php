@@ -3,10 +3,10 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-3 p-4 bg-gradient d-none d-md-block">
+            <div class="col-3 p-4">
                 <div class="bg_gradient p-4 rounded-3 shadow">
                     <h2 class="fs-4 text_blue_primary py-2 text-center">
-                        Dashboard ristoratore
+                        Dashboard negozio
                     </h2>
 
                     <div class="">
@@ -24,8 +24,7 @@
                             </a>
                         </div>
                         <div class="text_blue_primary mt-3">
-                            <a href="{{ route('admin.types.index') }}"
-                                class="text-decoration-none text-reset btn btn-light p-3 w-100"><i
+                            <a href="" class="text-decoration-none text-reset btn btn-light p-3 w-100"><i
                                     class="fa-solid fa-bag-shopping me-md-2 "></i>
                                 Visualizza le tipologie
                             </a>
@@ -39,4 +38,6 @@
 
                 @yield('dashboard_content')
             </div>
-        @endsection
+        </div>
+    </div>
+@endsection
