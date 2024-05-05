@@ -37,16 +37,29 @@
 
                                 <td>
                                     <div class="button-container d-flex">
-                                        <a href="" class="btn btn-outline-secondary m-2"><i
-                                                class="fa-solid fa-magnifying-glass"></i></a>
-                                        <a class="btn btn-outline-warning  m-2" href=""><i
-                                                class="fa-solid fa-edit"></i></a>
+                                        <a href="{{ route('admin.products.show', ['product' => $product->id]) }}"
+                                            class="btn btn-outline-secondary m-2">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
 
-                                        <a href="" class="btn btn-sm btn-outline-danger m-2 px-2">
-                                            <i class="fa-solid fa-trash px-1 mt-2"></i>
+                                        </a>
+                                        <a class="btn btn-outline-warning  m-2"
+                                            href="{{ route('admin.products.edit', ['product' => $product->id]) }}">
+                                            <i class="fa-solid fa-edit"></i>
+
                                         </a>
 
-                                        {{-- @include('admin.dishes.partials.modal_delete') --}}
+                                        <form class=" m-2"
+                                            action="{{ route('admin.products.destroy', ['product' => $product['id']]) }}"
+                                            method="POST"
+                                            onsubmit="return confirm('Sei sicuro di voler eliminare il prodotto?')">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-outline-danger"><i
+                                                    class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </form>
+
+
                                     </div>
                                 </td>
 

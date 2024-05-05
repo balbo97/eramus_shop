@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Product;
 use App\Models\Type;
+use App\Models\User;
 
 
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -76,7 +78,9 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+
+
+        return view('admin.products.show', compact('product'));
     }
 
     /**
@@ -110,6 +114,9 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        // elimino il prodotto dal db
+        $product->delete();
+
+        return redirect()->route('admin.products.index');
     }
 }
