@@ -1,26 +1,42 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h2 class="fs-4 text-secondary my-4">
-        {{ __('Dashboard') }}
-    </h2>
-    <div class="row justify-content-center">
-        <div class="col">
-            <div class="card">
-                <div class="card-header">{{ __('User Dashboard') }}</div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 p-4 bg-gradient d-none d-md-block">
+                <div class="bg_gradient p-4 rounded-3 shadow">
+                    <h2 class="fs-4 text_blue_primary py-2 text-center">
+                        Dashboard ristoratore
+                    </h2>
 
-                <div class="card-body">
-                    @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
+                    <div class="">
+                        @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+                        <div class="text_blue_primary">
+                            <a href="{{ route('admin.products.index') }}"
+                                class="text-decoration-none text-reset btn btn-light p-3 w-100"><i
+                                    class="fa-solid fa-pizza-slice me-2"></i>
+                                Visualizza i tuoi prodotti
+                            </a>
+                        </div>
+                        <div class="text_blue_primary mt-3">
+                            <a href="{{ route('admin.types.index') }}"
+                                class="text-decoration-none text-reset btn btn-light p-3 w-100"><i
+                                    class="fa-solid fa-bag-shopping me-md-2 "></i>
+                                Visualizza le tipologie
+                            </a>
+                        </div>
+
                     </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-@endsection
+            <div class="col-12 m-auto col-md-9 text-warning text-center pt-3">
+
+
+                @yield('dashboard_content')
+            </div>
+        @endsection
