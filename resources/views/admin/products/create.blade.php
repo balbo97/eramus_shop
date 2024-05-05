@@ -5,9 +5,18 @@
         @csrf
 
         <div class="container py-5">
+            <div class="row">
+
+                <div class="col-12 d-flex justify-content-end">
+
+                    <a href=" {{ route('admin.products.index') }}" class="btn btn-outline-danger">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                </div>
+            </div>
             <div class="row justify-content-center">
                 <div id="storeForm-errors" class="mb-4 d-flex flex-column gap-2"></div>
-                <div class="col-12mb-4">
+                <div class="col-12mb-4 text-center">
                     <h1>Aggiungi un nuovo prodotto</h1>
 
                 </div>

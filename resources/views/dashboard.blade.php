@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 m-auto col-md-9 text-center pt-3">
+            <div class="col-12 m-auto col-md-9 pt-3">
 
                 @if (Route::currentRouteName() == 'admin.dashboard')
                     <div class="row">

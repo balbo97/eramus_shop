@@ -5,9 +5,14 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Product;
 use App\Models\Type;
 
+
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use App\Http\Controllers\Controller;
+
+
+
+
 
 class ProductController extends Controller
 {
@@ -41,7 +46,28 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        //
+        // Stampiamo i dati inviati dal form per debug
+        dd($request->all());
+
+        // recupero i dati inviati dalla form
+        $form_data = $request->all();
+
+        // creo una nuova istanza del model Product
+        $product = new Product();
+
+        // riempio gli altri campi con la funzione fill()
+        $product->fill($form_data);
+
+        // vado a cotrollare se la request ha le tecnologies
+        if ($request->has('types')) {
+            $product->types()->attach($form_data['types']);
+        }
+
+        // salvo il record sul db
+        $product->save();
+
+        // effettuo il redirect alla view index
+        return redirect()->route('admin.products.index');
     }
 
     /**
