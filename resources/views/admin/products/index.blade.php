@@ -33,7 +33,13 @@
                                 <td class="text-secondary-emphasis">{{ $product->name }}</td>
                                 <td class="text-secondary-emphasis">{{ $product->description }}</td>
                                 <td class="text-secondary-emphasis ">{{ $product->created_at->format('d-m-Y') }}</td>
-                                <td class="text-secondary-emphasis ">{{ $product->type->name }}</td>
+                                <td class="text-secondary-emphasis ">
+                                    @if ($product->type && $product->type->name)
+                                        {{ $product->type->name }}
+                                    @else
+                                        Nessuna
+                                    @endif
+                                </td>
 
                                 <td>
                                     <div class="button-container d-flex">

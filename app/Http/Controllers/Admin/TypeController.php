@@ -1,10 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
+
+use App\Models\Type as TypeModel;
 
 use App\Http\Requests\StoreTypeRequest;
 use App\Http\Requests\UpdateTypeRequest;
-use App\Models\Type;
+
+use App\Http\Controllers\Controller;
+
+
 
 class TypeController extends Controller
 {
@@ -45,7 +50,7 @@ class TypeController extends Controller
      * @param  \App\Models\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function show(Type $type)
+    public function show(TypeModel $type)
     {
         //
     }
@@ -56,7 +61,7 @@ class TypeController extends Controller
      * @param  \App\Models\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function edit(Type $type)
+    public function edit(TypeModel $type)
     {
         //
     }
@@ -68,7 +73,7 @@ class TypeController extends Controller
      * @param  \App\Models\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateTypeRequest $request, Type $type)
+    public function update(UpdateTypeRequest $request, TypeModel $type)
     {
         //
     }
@@ -79,7 +84,7 @@ class TypeController extends Controller
      * @param  \App\Models\Type  $type
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Type $type)
+    public function destroy(TypeModel $type)
     {
         //
     }
