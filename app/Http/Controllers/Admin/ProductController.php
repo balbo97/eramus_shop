@@ -104,7 +104,14 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-        //
+        // recupero i dati inviati dalla form
+        $form_data = $request->all();
+
+        // Aggiorna i campi del piatto con i nuovi dati
+        $product->update($form_data);
+
+        // effettua il redirect alla view index
+        return redirect()->route('admin.products.index');
     }
 
     /**

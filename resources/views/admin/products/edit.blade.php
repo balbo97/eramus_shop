@@ -1,8 +1,10 @@
 @extends('dashboard')
 
 @section('dashboard_content')
-    <form id="storeForm" method="POST" action="{{ route('admin.products.store') }}" enctype="multipart/form-data">
+    <form id="storeForm" method="POST" action="{{ route('admin.products.update', $product->id) }}"
+        enctype="multipart/form-data">
         @csrf
+        @method('PUT')
 
         <div class="container py-5">
             <div class="row">
