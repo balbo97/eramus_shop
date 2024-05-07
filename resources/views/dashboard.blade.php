@@ -46,7 +46,7 @@
                 @if (Route::currentRouteName() == 'admin.dashboard')
                     <div class="row">
                         <div class="col-12">
-                            <h1>Welcome back <br>{{ Auth::user()->name }}!</h1>
+                            <h1>Welcome back {{ Auth::user()->name }}!</h1>
                         </div>
                     </div>
                 @endif
