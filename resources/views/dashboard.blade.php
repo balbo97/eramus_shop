@@ -31,7 +31,8 @@
                             </a>
                         </div>
                         <div class="text_blue_primary mt-3">
-                            <a href="" class="text-decoration-none text-reset btn btn-light p-3 w-100"><i
+                            <a href="{{ route('admin.types.index') }}"
+                                class="text-decoration-none text-reset btn btn-light p-3 w-100"><i
                                     class="fa-solid fa-tag fa-xl me-md-2 "></i>
                                 Visualizza le tipologie
                             </a>

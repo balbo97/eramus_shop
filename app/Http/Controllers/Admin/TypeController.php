@@ -20,7 +20,8 @@ class TypeController extends Controller
      */
     public function index()
     {
-        //
+        $types = TypeModel::all();
+        return view('admin.types.index', compact('types'));
     }
 
     /**
