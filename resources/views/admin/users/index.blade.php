@@ -8,7 +8,7 @@
 
                 <h1>Lista Utenti</h1>
                 <div class="content d-flex align-items-center fs-3">
-                    <a class="btn btn-outline-success fw-bold m-3" href="{{ Route('admin.products.create') }}" role="button">
+                    <a class="btn btn-outline-success fw-bold m-3" href="{{ Route('admin.users.create') }}" role="button">
                         <div class=""><i class="fa-solid fa-user-plus"></i></i> Aggiungi un nuovo utente </div>
                     </a>
                 </div>

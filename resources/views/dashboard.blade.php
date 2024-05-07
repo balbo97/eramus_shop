@@ -17,7 +17,7 @@
                         @endif
 
                         <div class="text_blue_primary mt-3">
-                            <a href="{{ route('register.index') }}"
+                            <a href="{{ route('admin.users.index') }}"
                                 class="text-decoration-none text-reset btn btn-light p-3 w-100"><i
                                     class="fa-solid fa-users fa-xl me-md-2"></i>
                                 Visualizza gli utenti

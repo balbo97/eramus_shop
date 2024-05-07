@@ -37,7 +37,7 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('register/index', [RegisteredUserController::class, 'index'])->name('register.index');
+
     Route::get('verify-email', EmailVerificationPromptController::class)
         ->name('verification.notice');
 
