@@ -1,66 +1,32 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+1. Aggiunta di surname e birthdate al modello User e al form di registrazione:
+ -Aggiunti i campi 'surname' e 'birthdate' al modello User e al form di registrazione dell'utente.  -Aggiornate le regole di validazione e la creazione dell'utente.
+2. Aggiunta della gestione degli utenti e dei prodotti al pannello di amministrazione:
+ -Aggiunta della gestione degli utenti e dei prodotti al pannello di amministrazione con rotte, controller e viste per la creazione e la visualizzazione degli utenti e dei prodotti.
+3. Implementazione della funzionalità di creazione e gestione dei prodotti:
+ -Aggiunta la possibilità di creare e gestire prodotti nel pannello di amministrazione. Questo include la visualizzazione, la modifica e l'eliminazione dei prodotti, nonché la creazione di nuovi prodotti con una relazione many-to-many con i tipi.
+4. Aggiornamento del controller NewPasswordController per semplificare la regola di validazione della password:
+ -Aggiornata la regola di validazione della password nel controller NewPasswordController per richiedere solo la password, confermata e che soddisfi i requisiti di complessità predefiniti.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Progetto Web di Prova 
+Questo progetto è un'applicazione web sviluppata come parte di una prova. 
 
-## Learning Laravel
+Tecnologie Utilizzate
+Backend: Laravel (linguaggio di programmazione PHP)
+Frontend: Vue.js
+Database: MySQL
+Framework CSS: Bootstrap
+Sicurezza: Autenticazione delle sessioni Laravel, middleware per la gestione degli accessi
+Struttura dell'Applicazione
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+L'applicazione è divisa in tre principali maschere:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Maschera di Login: L'utente accede all'applicazione tramite un'interfaccia di login. Le credenziali vengono verificate con i dati nel database e, in caso di errore, viene visualizzato un alert appropriato.
+- Maschera di Gestione degli Utenti: Dopo il login, l'utente ha accesso a un'interfaccia che consente la gestione completa degli utenti. È possibile visualizzare gli utenti attraverso una tabella e inserire nuovi utenti tramite un piccolo modulo.
+- Maschera di Gestione dell'Inventario: Questa maschera permette la gestione dell'inventario del negozio. Gli utenti possono inserire, modificare ed eliminare i prodotti dall'inventario. I tipi di prodotti supportati sono Buste, Carta e Toner.
+Sicurezza dell'Applicativo
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Per garantire la sicurezza dell'applicativo, viene utilizzata l'autenticazione delle sessioni di Laravel. Al momento del login, viene generato un token da backend per autenticare tutte le chiamate successive. Senza questo token, l'applicativo non consente l'accesso a nessuna informazione sensibile.
