@@ -1,11 +1,9 @@
-1. Aggiunta di surname e birthdate al modello User e al form di registrazione:
- -Aggiunti i campi 'surname' e 'birthdate' al modello User e al form di registrazione dell'utente.  -Aggiornate le regole di validazione e la creazione dell'utente.
-2. Aggiunta della gestione degli utenti e dei prodotti al pannello di amministrazione:
- -Aggiunta della gestione degli utenti e dei prodotti al pannello di amministrazione con rotte, controller e viste per la creazione e la visualizzazione degli utenti e dei prodotti.
-3. Implementazione della funzionalità di creazione e gestione dei prodotti:
- -Aggiunta la possibilità di creare e gestire prodotti nel pannello di amministrazione. Questo include la visualizzazione, la modifica e l'eliminazione dei prodotti, nonché la creazione di nuovi prodotti con una relazione many-to-many con i tipi.
-4. Aggiornamento del controller NewPasswordController per semplificare la regola di validazione della password:
- -Aggiornata la regola di validazione della password nel controller NewPasswordController per richiedere solo la password, confermata e che soddisfi i requisiti di complessità predefiniti.
+
+
+![eramus shop](https://github.com/balbo97/eramus_shop/assets/145669273/5c956060-d147-4fbb-95f0-0072fc844800)
+
+
+
 
 
 
@@ -30,3 +28,12 @@ L'applicazione è divisa in tre principali maschere:
 Sicurezza dell'Applicativo
 
 Per garantire la sicurezza dell'applicativo, viene utilizzata l'autenticazione delle sessioni di Laravel. Al momento del login, viene generato un token da backend per autenticare tutte le chiamate successive. Senza questo token, l'applicativo non consente l'accesso a nessuna informazione sensibile.
+
+1. Aggiunta di surname e birthdate al modello User e al form di registrazione:
+ -Aggiunti i campi 'surname' e 'birthdate' al modello User e al form di registrazione dell'utente.  -Aggiornate le regole di validazione e la creazione dell'utente.
+2. Aggiunta della gestione degli utenti e dei prodotti al pannello di amministrazione:
+ -Aggiunta della gestione degli utenti e dei prodotti al pannello di amministrazione con rotte, controller e viste per la creazione e la visualizzazione degli utenti e dei prodotti.
+3. Implementazione della funzionalità di creazione e gestione dei prodotti:
+ -Aggiunta la possibilità di creare e gestire prodotti nel pannello di amministrazione. Questo include la visualizzazione, la modifica e l'eliminazione dei prodotti, nonché la creazione di nuovi prodotti con una relazione many-to-many con i tipi.
+4. Aggiornamento del controller NewPasswordController per semplificare la regola di validazione della password:
+ -Aggiornata la regola di validazione della password nel controller NewPasswordController per richiedere solo la password, confermata e che soddisfi i requisiti di complessità predefiniti.
